@@ -1,6 +1,13 @@
-adds/
+# Scrapy
+scrapy/
+.wdm/
+
+# Data
 data/
 
+# IDEs
+.vscode/
+.idea/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
