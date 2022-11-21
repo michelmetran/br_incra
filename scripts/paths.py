@@ -34,6 +34,5 @@ output_path = data_path / 'output'
 output_path.mkdir(exist_ok=True)
 
 
-
 if __name__ == '__main__':
     print(project_path)

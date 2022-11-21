@@ -6,11 +6,12 @@ https://github.com/mozilla/geckodriver/releases
 out/22
 """
 
-import tarfile
-import requests
 import platform
-from paths import *
+import tarfile
 from zipfile import ZipFile
+
+import requests
+from paths import *
 
 
 def _check_geckodriver_exists(path):
@@ -101,6 +102,7 @@ def get_path_geckodriver(path):
 
 if __name__ == '__main__':
     import time
+
     from selenium import webdriver
     from selenium.webdriver.chrome.service import Service as ChromeService
     from selenium.webdriver.firefox.service import Service as FirefoxService
