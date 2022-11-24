@@ -1,8 +1,6 @@
 # INCRA
 
-
 - [GitHub](https://github.com/open-geodata/br_incra)
-
 
 <br>
 

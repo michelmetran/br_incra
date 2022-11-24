@@ -4,6 +4,7 @@ Funções
 """
 
 
+import pprint
 import time
 
 from selenium import webdriver
@@ -11,13 +12,12 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
 from selenium.webdriver.firefox.service import Service as FirefoxService
 from selenium.webdriver.support.select import Select
+from traquitanas.scrapping import gecko
 
-from traquitanas import net
 
-
-class Pom:
+class Driver:
     """
-    _summary_
+    Create Driver
 
     :param webdriver: _description_
     :type webdriver: _type_
@@ -35,7 +35,7 @@ class Pom:
         :type download_path: _type_
         """
         # Services
-        gecko_path = net.gecko.get_path_geckodriver(driver_path)
+        gecko_path = gecko.get_path_geckodriver(driver_path, verify_ssl=True)
 
         # Logs
         logs_filepath = logs_path / 'geckodriver.log'
@@ -51,12 +51,22 @@ class Pom:
         options.set_preference('intl.accept_languages', 'pt-BR, pt')
         options.set_preference('browser.download.folderList', 2)
         options.set_preference('browser.aboutConfig.showWarning', False)
-        options.set_preference('browser.download.manager.showWhenStarting', False)
+        options.set_preference(
+            'browser.download.manager.showWhenStarting', False
+        )
         options.set_preference('browser.download.dir', str(download_path))
-        options.set_preference('browser.helperApps.neverAsk.saveToDisk', 'application/octet-stream, application/pdf, application/vnd.ms-excel')
-        options.set_preference('browser.helperApps.showOpenOptionForPdfJS', False)
+        options.set_preference(
+            'browser.helperApps.neverAsk.saveToDisk',
+            'application/octet-stream, application/pdf, application/vnd.ms-excel',
+        )
+        options.set_preference(
+            'browser.helperApps.showOpenOptionForPdfJS', False
+        )
         options.set_preference('browser.download.forbid_open_with', True)
-        options.set_preference('general.useragent.override', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Safari/537.36')
+        options.set_preference(
+            'general.useragent.override',
+            'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Safari/537.36',
+        )
         options.set_preference('pdfjs.disabled', True)
         options.set_preference('plugin.scan.Acrobat', '99.0')
         options.set_preference('plugin.scan.plid.all', False)
@@ -75,7 +85,6 @@ class Pom:
     def get_estados(self):
         """
         Lista os Estados Disponíveis
-
         """
         # Pega todas as opções de Estados
         ufs_xpath = self.driver.find_elements(
@@ -85,7 +94,7 @@ class Pom:
         # Monta uma lista com as opções de Estado
         ufs = []
         for i in ufs_xpath[1:]:
-            #print(i.get_attribute('innerHTML'))
+            # print(i.get_attribute('innerHTML'))
             ufs.append(i.get_attribute('innerHTML'))
 
         return ufs
@@ -94,7 +103,6 @@ class Pom:
         """
         ddd
         """
-
         # Get text of file
         text = self.driver.find_element(
             By.XPATH, '//*[@class="form-horizontal form_2"]'
@@ -110,14 +118,12 @@ class Pom:
             'nome_arquivo': text[3][1].strip(),
         }
 
-    def get_sigef_estado(self, estado, t=60):
+    def get_sigef(self, estado, t=60):
         """
         Sigef
-
         """
-
         # Start
-        print(f'"{estado}" início donwload...')
+        print(f'Sigef de "{estado}": início donwload...')
 
         # Seleciona "Nome da Camada"
         sat = Select(self.driver.find_element(By.XPATH, "//*[@id='selectshp']"))
@@ -137,8 +143,8 @@ class Pom:
         while dict_infos['camada'] == '...':
             time.sleep(2)
             dict_infos = self.get_infos()
-            print('Waiting...')
-        print(dict_infos)
+            print('... waiting...')
+        pprint.pprint(dict_infos)
 
         # Clica para fazer download
         self.driver.find_element(
@@ -146,16 +152,12 @@ class Pom:
         ).click()
         time.sleep(t)
 
-        # End
-        print(f'"{estado}" donwload ok!')
-
-    def get_snci_estado(self, estado, t=60):
+    def get_snci(self, estado, t=60):
         """
         SNCI
-
         """
         # Start
-        print(f'"{estado}" início donwload...')
+        print(f'SNCI de "{estado}": início donwload...')
 
         # Seleciona "Nome da Camada"
         sat = Select(self.driver.find_element(By.XPATH, "//*[@id='selectshp']"))
@@ -175,8 +177,8 @@ class Pom:
         while dict_infos['camada'] == '...':
             time.sleep(2)
             dict_infos = self.get_infos()
-            print('Waiting...')
-        print(dict_infos)
+            print('... waiting...')
+        pprint.pprint(dict_infos)
 
         # Clica para fazer download
         self.driver.find_element(
@@ -184,17 +186,12 @@ class Pom:
         ).click()
         time.sleep(t)
 
-        # End
-        print(f'"{estado}" donwload ok!')
-
-    def get_assentamento_estado(self, estado, t=60):
+    def get_assentamento(self, estado, t=60):
         """
         Projeto de Assentamento
-
         """
-
         # Start
-        print(f'"{estado}" início donwload...')
+        print(f'Assentamento de "{estado}": início donwload...')
 
         # Seleciona "Nome da Camada"
         sat = Select(self.driver.find_element(By.XPATH, "//*[@id='selectshp']"))
@@ -214,8 +211,8 @@ class Pom:
         while dict_infos['camada'] == '...':
             time.sleep(2)
             dict_infos = self.get_infos()
-            print('Waiting...')
-        print(dict_infos)
+            print('... waiting...')
+        pprint.pprint(dict_infos)
 
         # Clica para fazer download
         self.driver.find_element(
@@ -223,16 +220,12 @@ class Pom:
         ).click()
         time.sleep(t)
 
-        # End
-        print(f'"{estado}" donwload ok!')
-
-    def get_quilombolas_estado(self, estado, t=60):
+    def get_quilombolas(self, estado, t=60):
         """
         Quilombolas
         """
-
         # Start
-        print(f'"{estado}" início donwload...')
+        print(f'Quilombolas de "{estado}": início donwload...')
 
         # Seleciona "Nome da Camada"
         sat = Select(self.driver.find_element(By.XPATH, "//*[@id='selectshp']"))
@@ -252,7 +245,7 @@ class Pom:
         while dict_infos['camada'] == '...':
             time.sleep(2)
             dict_infos = self.get_infos()
-            print('Waiting...')
+            print('... waiting...')
         print(dict_infos)
 
         # Clica para fazer download
@@ -260,9 +253,6 @@ class Pom:
             By.XPATH, '//*[@class="form-horizontal form_2"]//a'
         ).click()
         time.sleep(t)
-
-        # End
-        print(f'"{estado}" donwload ok!')
 
     def quit(self):
         """
@@ -272,12 +262,12 @@ class Pom:
 
 
 if __name__ == '__main__':
-    # dddd
-    from paths import driver_path, logs_path, input_path
+    from paths import driver_path, input_path, logs_path
 
-    # Pass
-    driver = Pom(driver_path, logs_path, input_path)
+    # Driver
+    driver = Driver(driver_path, logs_path, input_path)
     driver.go_page()
 
+    # Quit Driver
     time.sleep(4)
     driver.quit()
