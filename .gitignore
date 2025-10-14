@@ -4,6 +4,7 @@ scrapy/
 
 # Data
 data/
+_lixo/
 
 # IDEs
 .vscode/

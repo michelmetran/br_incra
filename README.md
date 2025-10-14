@@ -1,18 +1,17 @@
 # INCRA
 
-- [GitHub](https://github.com/open-geodata/br_incra)
+[![Repo](https://img.shields.io/badge/GitHub-repo-blue?logo=github&logoColor=f5f5f5)](https://github.com/open-geodata/br_incra)
 
 <br>
 
-_Script_ para baixar dados do INCRA.
-<br>
+_Script_ para baixar dados do INCRA.\
 Elaborado em 18.06.2021.
 
 <br>
 
 ---
 
-### WMS
+## WMS
 
 _Site_ para exportar:
 
@@ -31,5 +30,4 @@ Servidores WMS:
 
 ### _TODO_
 
-1. ...
-2.
+1. ~~Ideal clicar em "obter" para que ele crie um arquivo novo.~~
