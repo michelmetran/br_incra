@@ -1,13 +1,13 @@
 # INCRA
 
 [![Repo](https://img.shields.io/badge/GitHub-repo-blue?logo=github&logoColor=f5f5f5)](https://github.com/michelmetran/pyCFM)
-[![PyPI - Version](https://img.shields.io/pypi/v/pycfm?logo=pypi&label=PyPI&color=blue)](https://pypi.org/project/pycfm/)
+[![PyPI - Version](https://img.shields.io/pypi/v/incra?logo=pypi&label=PyPI&color=blue)](https://pypi.org/project/incra/)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1XvbBN5J6013xLtpDZYNeo3bQyQTxm-h5?usp=sharing)
 <br>
-[![Read the Docs](https://img.shields.io/readthedocs/pyCFM?logo=ReadTheDocs&label=Read%20The%20Docs)](https://pyCFM.readthedocs.io/)
+[![Read the Docs](https://img.shields.io/readthedocs/incra?logo=ReadTheDocs&label=Read%20The%20Docs)](https://incra.readthedocs.io/)
 [![Publish Python to PyPI](https://github.com/michelmetran/pyCFM/actions/workflows/publish-to-pypi-uv.yml/badge.svg)](https://github.com/michelmetran/pyCFM/actions/workflows/publish-to-pypi-uv.yml)
 
-O [Conselho Federal de Medicina (CFM)](https://portal.cfm.org.br/) mantem serviço de busca de médicos, utilizando nome, CRM, especialidade etc. Inicialmente pensei em usar o _site_ do [Conselho Regional de Medicina do Estado de São Paulo (CREMESP)](https://cremesp.org.br/) contudo, dessa forma, eu só teria o CRM de médicos registrados no estado de São Paulo. Logo, optei por acessar o sistema de busca de médicos do [Conselho Federal de Medicina (CFM)](https://portal.cfm.org.br/).
+O INCRA mantem serviço para obtenção de dados espaciais.
 
 ![CFM](./assets/logo_cfm.jpg)
 
