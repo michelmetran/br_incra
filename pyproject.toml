@@ -1,6 +1,6 @@
 [project]
 name = "incra"
-version = "0.1.4"
+version = "0.1.5"
 description = "Obtem dados do INCRA usando python!"
 readme = "README.md"
 requires-python = ">=3.11"

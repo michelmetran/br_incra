@@ -2,9 +2,8 @@
 
 [![Repo](https://img.shields.io/badge/GitHub-repo-blue?logo=github&logoColor=f5f5f5)](https://github.com/michelmetran/br_incra)
 [![PyPI - Version](https://img.shields.io/pypi/v/incra?logo=pypi&label=PyPI&color=blue)](https://pypi.org/project/incra/)
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1XvbBN5J6013xLtpDZYNeo3bQyQTxm-h5?usp=sharing)
 <br>
-[![Read the Docs](https://img.shields.io/readthedocs/incra?logo=ReadTheDocs&label=Read%20The%20Docs)](https://br-incra.readthedocs.io/pt/latest/)
+[![Read the Docs](https://img.shields.io/readthedocs/incra/latest?logo=ReadTheDocs&label=Read%20The%20Docs)](https://br-incra.readthedocs.io/pt/latest/)
 [![Publish Python to PyPI](https://github.com/michelmetran/br_incra/actions/workflows/publish-to-pypi-uv.yml/badge.svg)](https://github.com/michelmetran/br_incra/actions/workflows/publish-to-pypi-uv.yml)
 
 O [INCRA](https://www.gov.br/incra/pt-br) é o _Instituto Nacional de Colonização e Reforma Agrária_, uma autarquia federal brasileira vinculada ao [Ministério do Desenvolvimento Agrário e Agricultura Familiar](https://www.gov.br/mda/pt-br).
