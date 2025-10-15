@@ -2,7 +2,7 @@
 site_name: INCRA
 site_author: Michel Metran
 site_description: Obtem dados do INCRA usando python!
-site_url: https://incra.readthedocs.io/
+site_url: https://br-incra.readthedocs.io/
 copyright: |
   &copy; 2025 <a href="https://github.com/michelmetran"  target="_blank" rel="noopener">Michel Metran</a>
 
@@ -17,19 +17,8 @@ site_dir: "site" # Default site
 nav:
   - Home: index.md
   - Como Instalar?: pages/como-instalar.md
-  - Como Usar?:
-      - Busca Médico: scripts/02_classe.ipynb
-      # - Listas: scripts/listas.ipynb
-  #     - Navegador/Driver: scripts/driver.ipynb
-  #     - Login: scripts/login.ipynb
-  #     - Dados Cadastrais: scripts/cadastro.ipynb
-  #     - Gerenciamento de Perfil: scripts/gerenciamento_perfil.ipynb
-  #     - Consulta de Processos: scripts/consulta_processo.ipynb
-  # - Histórico: pages/histórico.md
+  - Como Usar?: scripts/02_classe.ipynb
   - Como Contribuir?: pages/como-contribuir.md
-  # - Page Object Model: pages/pacote.md
-  # - Bugs: pages/bugs.md
-  # - Intimações: pages/intimações.md
   - Me, Myself and I: pages/autor.md
 
 theme:
@@ -60,7 +49,7 @@ theme:
   palette:
     # Palette toggle for automatic mode
     - media: "(prefers-color-scheme)"
-      primary: green
+      primary: deep orange
       accent: indigo
       toggle:
         icon: material/brightness-auto
@@ -69,7 +58,7 @@ theme:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: green
+      primary: deep orange
       accent: indigo
       toggle:
         icon: material/brightness-7
@@ -78,7 +67,7 @@ theme:
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: green
+      primary: brown
       accent: indigo
       toggle:
         icon: material/brightness-4

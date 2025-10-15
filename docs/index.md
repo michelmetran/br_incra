@@ -5,7 +5,7 @@
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1XvbBN5J6013xLtpDZYNeo3bQyQTxm-h5?usp=sharing)
 <br>
 [![Read the Docs](https://img.shields.io/readthedocs/incra?logo=ReadTheDocs&label=Read%20The%20Docs)](https://br-incra.readthedocs.io/pt/latest/)
-[![Publish Python to PyPI](https://github.com/michelmetran/pyCFM/actions/workflows/publish-to-pypi-uv.yml/badge.svg)](https://github.com/michelmetran/pyCFM/actions/workflows/publish-to-pypi-uv.yml)
+[![Publish Python to PyPI](https://github.com/michelmetran/br_incra/actions/workflows/publish-to-pypi-uv.yml/badge.svg)](https://github.com/michelmetran/br_incra/actions/workflows/publish-to-pypi-uv.yml)
 
 O [INCRA](https://www.gov.br/incra/pt-br) é o _Instituto Nacional de Colonização e Reforma Agrária_, uma autarquia federal brasileira vinculada ao [Ministério do Desenvolvimento Agrário e Agricultura Familiar](https://www.gov.br/mda/pt-br).
 
@@ -43,4 +43,3 @@ A alternativa que resta é estudar e desenvolver uma forma de obter os dados atu
 - Para gerenciamento do projeto e dependências, utilizou-se o [uv](https://docs.astral.sh/uv/).
 - Para documentação foi usado o [MkDocs](https://www.mkdocs.org/)
 - Foi usado o [requests](https://pypi.org/project/requests/) para as requisições.
-- Se quiser fazer um teste rápido, clique no botão [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1XvbBN5J6013xLtpDZYNeo3bQyQTxm-h5?usp=sharing)

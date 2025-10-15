@@ -147,33 +147,36 @@ class INCRA:
         """
         Atualiza
         """
+        # Inicia
+        url = 'https://certificacao.incra.gov.br/csv_shp/export_shp.py'
+        s = self.session.get(url=url)
 
         # Faz o request para atualizar o dado
         s = self.session.post(
-            url='https://certificacao.incra.gov.br/csv_shp/export_shp.py',
+            url=url,
             params={
                 'selectshp': self._dropdown,
                 'selectuf': self._uf_to_update,
             },
-            stream=True,
+            stream=False,
         )
         if s.status_code != 200:
             raise Exception(f'Não foi possível atualizar. {s.status_code}')
 
     def download(self, output_path) -> None:
         """
-        Fazer o download 
+        Fazer o download
 
         :param output_path: Pasta que irá receber os arquivos
         :type output_path: str | Path
         """
-        url_lyr = urljoin(
+        self._url = urljoin(
             base='https://certificacao.incra.gov.br/csv_shp/zip/',
             url=quote(self._filename_to_download),
         )
 
         # Faz requisição
-        s = self.session.get(url=url_lyr, stream=True)
+        s = self.session.get(url=self._url, stream=True)
 
         # Define nome do arquivo
         self.output_file = Path(output_path) / self._filename_to_download
