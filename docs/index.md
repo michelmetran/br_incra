@@ -1,10 +1,10 @@
 # INCRA
 
-[![Repo](https://img.shields.io/badge/GitHub-repo-blue?logo=github&logoColor=f5f5f5)](https://github.com/michelmetran/pyCFM)
+[![Repo](https://img.shields.io/badge/GitHub-repo-blue?logo=github&logoColor=f5f5f5)](https://github.com/michelmetran/br_incra)
 [![PyPI - Version](https://img.shields.io/pypi/v/incra?logo=pypi&label=PyPI&color=blue)](https://pypi.org/project/incra/)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1XvbBN5J6013xLtpDZYNeo3bQyQTxm-h5?usp=sharing)
 <br>
-[![Read the Docs](https://img.shields.io/readthedocs/incra?logo=ReadTheDocs&label=Read%20The%20Docs)](https://incra.readthedocs.io/)
+[![Read the Docs](https://img.shields.io/readthedocs/incra?logo=ReadTheDocs&label=Read%20The%20Docs)](https://br-incra.readthedocs.io/pt/latest/)
 [![Publish Python to PyPI](https://github.com/michelmetran/pyCFM/actions/workflows/publish-to-pypi-uv.yml/badge.svg)](https://github.com/michelmetran/pyCFM/actions/workflows/publish-to-pypi-uv.yml)
 
 O [INCRA](https://www.gov.br/incra/pt-br) é o _Instituto Nacional de Colonização e Reforma Agrária_, uma autarquia federal brasileira vinculada ao [Ministério do Desenvolvimento Agrário e Agricultura Familiar](https://www.gov.br/mda/pt-br).
@@ -32,7 +32,7 @@ No passado o serviço era "aberto", ou seja, não precisava de área logada para
 
 O INCRA até mantem página no [Portal de Dados Abertos](https://dados.gov.br/dados/organizacoes/visualizar/instituto-nacional-de-colonizacao-e-reforma-agraria), contudo já foi possível observar que os dados são bastante defasados (em 14.10.2025 os dados disponibilizados eram de 01.08.2023).
 
-A alternativa que resta é estudar e desenvolver uma forma de obter os dados atualizados.
+A alternativa que resta é estudar e desenvolver uma forma de obter os dados atualizados. Esse estudo está em constante evolução. Iniciei os estudos para obter dados do INCRA desde em 2021.
 
 <br>
 
