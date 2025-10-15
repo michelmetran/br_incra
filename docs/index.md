@@ -7,27 +7,32 @@
 [![Read the Docs](https://img.shields.io/readthedocs/incra?logo=ReadTheDocs&label=Read%20The%20Docs)](https://incra.readthedocs.io/)
 [![Publish Python to PyPI](https://github.com/michelmetran/pyCFM/actions/workflows/publish-to-pypi-uv.yml/badge.svg)](https://github.com/michelmetran/pyCFM/actions/workflows/publish-to-pypi-uv.yml)
 
-O INCRA mantem serviço para obtenção de dados espaciais.
+O [INCRA](https://www.gov.br/incra/pt-br) é o _Instituto Nacional de Colonização e Reforma Agrária_, uma autarquia federal brasileira vinculada ao [Ministério do Desenvolvimento Agrário e Agricultura Familiar](https://www.gov.br/mda/pt-br).
 
-![CFM](./assets/logo_cfm.jpg)
+Sua missão prioritária é:
 
-<br>
-
-Em meados de setembro de 2025 surgiu a necessidade de pesquisar diversos médicos, a partir do CRM. Para isso foi desenvolvido o [pyCFM](https://pyCFM.readthedocs.io/), que facilita a busca dessas informações usando _python_.
-
-No Brasil os _Conselhos Regionais de Medicina_ (CRMs), são os órgãos responsáveis por fiscalizar e regulamentar o exercício da medicina em cada estado. Todo médico precisa estar registrado no CRM do estado onde atua para poder exercer legalmente a profissão.
-
-- Cada médico tem um número de CRM único por estado. Portanto, é possível encontrar CRMs identicos para o mesmo CRM. Por isso a importância de definir o estado do CRM.
-- O CRM também atua em questões éticas, julgando condutas médicas.
-- Exemplo: [CREMESP](https://cremesp.org.br/) (São Paulo), CRM-RJ (Rio de Janeiro).
+- Realizar a reforma agrária: Isso envolve a obtenção de terras (por desapropriação, compra ou destinação de terras públicas) e a criação e consolidação de projetos de assentamento para famílias rurais sem terra ou com pouca terra.
+- Manter o cadastro nacional de imóveis rurais: O INCRA administra o Cadastro Nacional de Imóveis Rurais (CNIR) e emite o Certificado de Cadastro de Imóvel Rural (CCIR), que é essencial para o proprietário rural.
+- Administrar as terras públicas da União: É responsável pela gestão e regularização fundiária das terras públicas federais.
+- Realizar o ordenamento fundiário nacional: Trata de questões como o georreferenciamento de imóveis rurais, a limitação de aquisição de terras por estrangeiros, e a titulação de assentamentos e ocupações tradicionais (como quilombolas).
 
 <br>
 
-Já o [Conselho Federal de Medicina (CFM)](https://portal.cfm.org.br/) é o órgão nacional que supervisiona os _Conselhos Regionais de Medicina_ (CRMs). Ele define normas, regula a ética médica em nível federal e representa os médicos perante o governo e a sociedade.
+O **INCRA** mantem serviço para obtenção de dados espaciais no _site_ [https://certificacao.incra.gov.br/csv_shp/export_shp.py](https://certificacao.incra.gov.br/csv_shp/export_shp.py). Interessante observar que eles usarm um _script_ `export_shp.py` na _url_. Foi estudando como ele funciona que foi possível desenvolver o pacote `incra`.
 
-- Atua na formulação de políticas públicas de saúde.
-- Julga recursos de decisões dos CRMs.
-- Publica resoluções que orientam a prática médica no Brasil.
+![Acervo Fundiário](./assets/imgs/site_py.png)
+
+<br>
+
+No passado o serviço era "aberto", ou seja, não precisava de área logada para obter os dados. Em um anúncio entusiasmado, informado que o _"acesso ao Acervo Fundiário mudou"_ (para pior), passou a ser solicitado o acesso usando a conta **gov.br** para determinados serviços.
+
+![Acervo Fundiário](./assets/imgs/site_acervo.jpg)
+
+<br>
+
+O INCRA até mantem página no [Portal de Dados Abertos](https://dados.gov.br/dados/organizacoes/visualizar/instituto-nacional-de-colonizacao-e-reforma-agraria), contudo já foi possível observar que os dados são bastante defasados (em 14.10.2025 os dados disponibilizados eram de 01.08.2023).
+
+A alternativa que resta é estudar e desenvolver uma forma de obter os dados atualizados.
 
 <br>
 
@@ -39,12 +44,3 @@ Já o [Conselho Federal de Medicina (CFM)](https://portal.cfm.org.br/) é o órg
 - Para documentação foi usado o [MkDocs](https://www.mkdocs.org/)
 - Foi usado o [requests](https://pypi.org/project/requests/) para as requisições.
 - Se quiser fazer um teste rápido, clique no botão [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1XvbBN5J6013xLtpDZYNeo3bQyQTxm-h5?usp=sharing)
-
-<br>
-
----
-
-## TODO
-
-1. ~~Usar `session`~~
-2. Ajustar obtenção de foto. Tá falhando.
