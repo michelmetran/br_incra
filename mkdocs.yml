@@ -4,7 +4,7 @@ site_author: Michel Metran
 site_description: Obtem dados do INCRA usando python!
 site_url: https://br-incra.readthedocs.io/
 copyright: |
-  &copy; 2025 <a href="https://github.com/michelmetran"  target="_blank" rel="noopener">Michel Metran</a>
+  &copy; 2026 <a href="https://github.com/michelmetran"  target="_blank" rel="noopener">Michel Metran</a>
 
 # GitHub Repo Link
 repo_url: https://github.com/michelmetran/br_incra
