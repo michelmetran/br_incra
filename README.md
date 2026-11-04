@@ -33,6 +33,8 @@ O INCRA até mantem página no [Portal de Dados Abertos](https://dados.gov.br/da
 
 A alternativa que resta é estudar e desenvolver uma forma de obter os dados atualizados. Esse estudo está em constante evolução. Iniciei os estudos para obter dados do INCRA desde em 2021.
 
+Em 04.11.2026 vi que o _site_ que termina como `../export_shp.py` saiu do ar e, ao que tudo indica, só será possível o acesso aos dados via Portal de Dados Abertos.
+
 <br>
 
 ---

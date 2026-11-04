@@ -12,9 +12,7 @@ class CustomSSLContextHTTPAdapter(requests.adapters.HTTPAdapter):
         self.ssl_context = ssl_context
         super().__init__(**kwargs)
 
-    def init_poolmanager(
-        self, connections, maxsize, block=False, **kwargs
-    ) -> None:
+    def init_poolmanager(self, connections, maxsize, block=False, **kwargs) -> None:
         self.poolmanager = urllib3.poolmanager.PoolManager(
             num_pools=connections,
             maxsize=maxsize,
@@ -26,9 +24,9 @@ class CustomSSLContextHTTPAdapter(requests.adapters.HTTPAdapter):
 def create_session() -> requests.Session:
     ctx = create_urllib3_context()
     ctx.load_default_certs()
-    ctx.set_ciphers('AES256-GCM-SHA384')
+    ctx.set_ciphers("AES256-GCM-SHA384")
 
     session = requests.session()
-    session.adapters.pop('https://', None)
-    session.mount('https://', CustomSSLContextHTTPAdapter(ctx))
+    session.adapters.pop("https://", None)
+    session.mount("https://", CustomSSLContextHTTPAdapter(ctx))
     return session
