@@ -7,7 +7,7 @@ copyright: |
   &copy; 2025 <a href="https://github.com/michelmetran"  target="_blank" rel="noopener">Michel Metran</a>
 
 # GitHub Repo Link
-repo_url: https://github.com/michelmetran/incra
+repo_url: https://github.com/michelmetran/br_incra
 
 docs_dir: "docs" # Default docs
 site_dir: "site" # Default site
@@ -144,5 +144,5 @@ extra:
       link: https://twitter.com/michelmetran
 
   # https://squidfunk.github.io/mkdocs-material/setup/setting-up-versioning/#versioning
-  version:
-    provider: mike
+  # version:
+  #   provider: mike
